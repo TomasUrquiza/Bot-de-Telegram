@@ -44,7 +44,7 @@ def agregar_tarea(message):
         tareas[id_usuario].append(texto_usuario)
         bot.reply_to(message, f"✅ Guardado: *{texto_usuario}*", parse_mode="Markdown")
     else:
-        bot.reply_to(message, "⚠️ Escribe algo después del comando. Ej: `/tarea Ir al gym`", parse_mode="Markdown")
+        bot.reply_to(message, "⚠️ Escribe algo después del comando. Ej: `/tarea ir al gym`", parse_mode="Markdown")
 
 
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -89,4 +89,5 @@ def procesar_botones(call):
     except: pass
 
 print("💾 Sistema de Memoria Activo...")
+
 bot.infinity_polling()
